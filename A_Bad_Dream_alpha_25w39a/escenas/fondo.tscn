@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxhdf1hxootp7"]
+
+[ext_resource type="Texture2D" uid="uid://cl00n85vjg44h" path="res://textures/icko709zs5c41.png" id="1_0ghod"]
+[ext_resource type="PackedScene" uid="uid://ltpyneifkms" path="res://escenas/jugador.tscn" id="2_8geac"]
+[ext_resource type="PackedScene" uid="uid://08sby3aba1vp" path="res://escenas/ak47.tscn" id="3_8geac"]
+
+[node name="Fondo" type="Node2D"]
+
+[node name="Icko709Zs5c41" type="Sprite2D" parent="."]
+position = Vector2(267, 180)
+scale = Vector2(0.796875, 0.699219)
+texture = ExtResource("1_0ghod")
+
+[node name="jugador" parent="." instance=ExtResource("2_8geac")]
+position = Vector2(259, 124)
+
+[node name="Node2D" parent="." instance=ExtResource("3_8geac")]
+position = Vector2(127, 74)
