@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://08sby3aba1vp"]
+
+[ext_resource type="Script" uid="uid://b2msv1q1qyvlb" path="res://scripts/ak47.gd" id="1_cqh1c"]
+[ext_resource type="Texture2D" uid="uid://ckl24qanoogho" path="res://textures/Guns_V1.01 - Commission - Copy/01 - Individual sprites/Guns/AK 47 [96x48].png" id="1_y3opf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nijs"]
+size = Vector2(77, 23)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(179, 83)
+script = ExtResource("1_cqh1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-7.5, -7.5)
+shape = SubResource("RectangleShape2D_1nijs")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D"]
+position = Vector2(7.5, 7.5)
+texture = ExtResource("1_y3opf")
+
+[node name="spawnpoint" type="Node2D" parent="CharacterBody2D"]
+position = Vector2(28, -14)
